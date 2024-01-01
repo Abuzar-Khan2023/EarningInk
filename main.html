@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="path/to/fontawesome-free-6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-LC2+lQN/x0Vt3r2nNCtXlG1TZ7mCN0VvVrAeLQ2+tA3cW08C1bVor56mSv2tWY6Y4nTC0hG3r9CJkzbbYyBsrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Landing Page Project</title>
 </head>
 <body>
@@ -27,14 +30,6 @@
     </header>
 
     <section class="home">
-      <div class="media-icon">
-        <a href=""><i class="uil uil-facebook-f"></i></a>
-        <a href=""><i class="uil uil-twitter"></i></a>
-        <a href=""><i class="uil uil-instagram"></i></a>
-        <a href=""><i class="uil uil-youtube"></i></a>
-        <a href=""><i class="uil uil-linkedin"></i></a>
-        
-      </div>
 
         <div class="swiper bg-slider">
             <div class="swiper-wrapper">
@@ -43,7 +38,7 @@
                 <div class="text-content">
                     <h2 class="title">Autumn / Fall <span>Season</span></h2>
                 <p>Autumn, also called fall in North American English, is a season of shifting colors and contemplative moments. The trees gracefully shed their leaves, painting the landscape with reds, yellows, and oranges. The air turns crisp, hinting at the upcoming winter's embrace. </p>
-                <button class="read-btn">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
@@ -51,7 +46,7 @@
                 <div class="text-content">
                     <h2 class="title">Winter <span>Season</span></h2>
                 <p>Winter, a season of serene beauty, brings a hush over the land as snow blankets the earth. The air turns chilly, encouraging cozy moments by the fire. Trees stand bare, their branches like intricate silhouettes against the pale sky. It's a time for reflection and introspection.</p>
-                <button class="read-btn">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
@@ -59,7 +54,7 @@
                 <div class="text-content">
                     <h2 class="title">Spring <span>Season</span></h2>
                 <p>Spring, a season of renewal, awakens the world with a burst of life and color. Flowers bloom in a vibrant tapestry, and trees don new leaves in varying shades of green. The air carries a sense of freshness, and gentle rains nourish the earth. It's a time of growth and rejuvenation.</p>
-                <button class="read-btn">Read more <i class="uil uil-arrow-right"></i></button>
+               <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -67,7 +62,7 @@
                 <div class="text-content">
                     <h2 class="title">Summer <span>Season</span></h2>
                 <p>Summer, a season of warmth and vitality, envelops the world in its embrace. The sun shines brightly, casting its golden rays upon everything below. Lush green landscapes stretch out under clear blue skies. The air is filled with the sounds of laughter and the scent of blooming flowers.</p>
-                <button class="read-btn">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
             </div>
@@ -84,45 +79,150 @@
     </section>
 
     <section class="about section">
-      <h2>Season of the year</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, voluptate. Sint officia aut doloribus distinctio quaerat et vel corrupti repellat mollitia, animi modi adipisci earum. Consequatur nemo voluptate doloremque totam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus repellat et magni laudantium sed labore quibusdam saepe facilis, aperiam, ratione molestiae placeat magnam ex, consectetur nemo exercitationem. Nulla, architecto provident?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit maxime consectetur illum laboriosam, praesentium velit a qui cumque, architecto eligendi molestiae reprehenderit odio voluptatum. Architecto accusamus ipsum tenetur quae maiores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis perspiciatis distinctio atque expedita omnis ratione illum voluptates, rerum laudantium similique eos officiis, modi quas facilis! Corporis eligendi nulla perspiciatis?</p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptate explicabo dolores placeat unde asperiores provident cupiditate saepe quasi perspiciatis, ea repudiandae adipisci dolorum tenetur? Quibusdam ut accusantium omnis obcaecati.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et architecto iure repellat eaque asperiores impedit, aperiam amet molestiae totam suscipit temporibus, dignissimos deserunt ab quod odio adipisci, qui dolorum culpa!</p>
-      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus laboriosam laborum quod cumque officiis! Asperiores labore quaerat excepturi inventore iusto eligendi ea voluptatem error deleniti, corrupti sapiente quae delectus qui?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quod et at, rem debitis ipsam cumque? Illum distinctio explicabo nemo dicta doloremque, asperiores suscipit maiores saepe veritatis? Ut, ab vero.</p>
+      <h2>Season's of the year:</h2>
+        <div id="blog-container">
+          <article id="blog-post">
+            <h3>Autumn / Fall</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium,
+                saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis
+                repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus,
+                nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem.
+                Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Perspiciatis, voluptate. Sint officia aut doloribus distinctio quaerat et vel corrupti repellat mollitia,
+                animi modi adipisci earum. Consequatur nemo voluptate doloremque totam! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Minus repellat et magni laudantium sed labore quibusdam saepe facilis, aperiam,
+                ratione molestiae placeat magnam ex, consectetur nemo exercitationem. Nulla, architecto provident?
+              </p>
+          </article>
+
+          <article id="blog-post">
+            <h3>Winter:</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium,
+                saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis
+                repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium,
+                saepe dolorum eaque eum. Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi!
+                Perferendis repellendus possimus porro quos voluptate.Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum.
+                Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi!
+                Perferendis repellendus possimus porro quos voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Odit maxime consectetur illum laboriosam, praesentium velit a qui cumque, architecto eligendi molestiae reprehenderit odio voluptatum.
+                Architecto accusamus ipsum tenetur quae maiores! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse debitis perspiciatis distinctio atque
+                expedita omnis ratione illum voluptates, rerum laudantium similique eos officiis, modi quas facilis! Corporis
+                eligendi nulla perspiciatis?
+              </p>  
+          </article>
+
+          <article id="blog-post">
+            <h3>Spring:</h3>
+              <p> 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptate
+                explicabo dolores placeat unde asperiores provident cupiditate saepe quasi perspiciatis,
+                ea repudiandae adipisci dolorum tenetur? Quibusdam ut accusantium omnis obcaecati.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem.
+                Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum.
+                Voluptatibus, nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi!
+                Perferendis repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus,
+                nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus
+                porro quos voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Et architecto iure repellat eaque asperiores impedit, aperiam amet molestiae totam
+                suscipit temporibus, dignissimos deserunt ab quod odio adipisci, qui dolorum culpa!
+              </p>
+          </article>
+
+          <article id="blog-post">
+            <h3>Summer:</h3>
+              <p> 
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+                laboriosam laborum quod cumque officiis! Asperiores labore quaerat excepturi inventore iusto eligendi
+                ea voluptatem error deleniti, corrupti sapiente quae delectus qui?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem.
+                Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos voluptate.Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit. Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus,
+                nesciunt quidem. Quos laboriosam maiores dicta asperiores eligendi! Perferendis
+                repellendus possimus porro quos voluptate.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Reprehenderit aut laudantium, saepe dolorum eaque eum. Voluptatibus, nesciunt quidem.
+                Quos laboriosam maiores dicta asperiores eligendi! Perferendis repellendus possimus porro quos
+                voluptate. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Odio quod et at, rem debitis ipsam cumque? Illum distinctio explicabo nemo dicta doloremque,
+                asperiores suscipit maiores saepe veritatis? Ut, ab vero.
+              </p>
+          </article>
     </section>
 
-    <footer class="footer">
-      <div class="footer-content">
-          <div class="footer-logo">
-              <a href="#" class="Logo">Logo</a>
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <i class="fab fa-slack"></i>
+            <span class="logo_name">Blog Website</span>
           </div>
-          <div class="footer-social">
-              <a href="#"><i class="uil uil-facebook-f"></i></a>
-              <a href="#"><i class="uil uil-twitter"></i></a>
-              <a href="#"><i class="uil uil-instagram"></i></a>
-              <a href="#"><i class="uil uil-youtube"></i></a>
-              <a href="#"><i class="uil uil-linkedin"></i></a>
-          </div>
-          <div class="footer-nav">
-              <a href="#">Home</a>
-              <a href="#">Explore</a>
-              <a href="#">About</a>
-              <a href="#">Blog</a>
-              <a href="#">Contact</a>
+          <div class="media-icons">
+            <a href=""><i class="uil uil-facebook-f"></i></a>
+            <a href=""><i class="uil uil-twitter"></i></a>
+            <a href=""><i class="uil uil-instagram"></i></a>
+            <a href=""><i class="uil uil-linkedin"></i></a>
+            <a href=""><i class="uil uil-youtube"></i></a>
+            
           </div>
       </div>
-      <div class="footer-bottom">
-          <p>&copy; 2023 Season Of The Year. All Rights Reserved.</p>
-          <div class="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-          </div>
-      </div>
-  </footer>
-  
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started </a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">App design</a></li>
+          <li><a href="#">Web design</a></li>
+          <li><a href="#">Logo design</a></li>
+          <li><a href="#">Banner design</a></li>
+        </ul>
 
-    <script src="Js/swiper-bundle.min.js"></script>
-    <script src="Js/main.js"></script>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        
+        <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul>
+          
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright &copy; 2024 <a href="#">Blog Website</a>All rights reserved</span>
+          <span class="policy_terms">
+            <a href-"#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Js/swiper-bundle.min.js"></script>
+  <script src="Js/main.js"></script>
 
 </body>
 </html>

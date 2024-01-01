@@ -27,3 +27,10 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   navigation.classList.remove("active");
 });
+
+function scrollToSection(sectionId) {
+  const section = document.querySelector(sectionId);
+  if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
