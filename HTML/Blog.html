@@ -3,81 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="path/to/fontawesome-free-6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-LC2+lQN/x0Vt3r2nNCtXlG1TZ7mCN0VvVrAeLQ2+tA3cW08C1bVor56mSv2tWY6Y4nTC0hG3r9CJkzbbYyBsrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/Blog.css">
+    <link rel="stylesheet" href="../CSS/swiper-bundle.min.css">
+    <title>Blog - EarningInk</title>
 
-    <title>Landing Page Project</title>
-</head>
-<body>
-    <header>
+
         <div class="nav-bar">
-            <a href="" class="Logo">Logo</a>
+            <a href="" class="Logo">EarningInk</a>
             <div class="navigation">
                 <div class="nav-items">
                     <i class="uil uil-times nav-close-btn"></i>
-                    <a href="#"><i class="uil uil-home"></i>Home</a>
-                    <a href="#"><i class="uil uil-compass"></i>Explore</a>
+                    <a href="Home"><i class="uil uil-home"></i>Home</a>
+                    <a href="Blog.html"><i class="uil uil-document-layout-left"></i>Blog</a>
+                    <a href="explore.html"><i class="uil uil-compass"></i>Explore</a>
                     <a href="#"><i class="uil uil-info-circle"></i>About</a>
-                    <a href="#"><i class="uil uil-document-layout-left"></i>Blog</a>
                     <a href="#"><i class="uil uil-envelope"></i>Contact</a>
                 </div>
             </div>
             <i class="uil uil-apps nav-menu-btn"></i>
         </div>
-    </header>
 
-    <section class="home">
 
-        <div class="swiper bg-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/bg1.jpg" alt="">
-                <div class="text-content">
-                    <h2 class="title">Autumn / Fall <span>Season</span></h2>
-                <p>Autumn, also called fall in North American English, is a season of shifting colors and contemplative moments. The trees gracefully shed their leaves, painting the landscape with reds, yellows, and oranges. The air turns crisp, hinting at the upcoming winter's embrace. </p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
-                </div>
-              </div>
-              <div class="swiper-slide dark-layer">
-                <img src="images/bg2.jpg" alt="">
-                <div class="text-content">
-                    <h2 class="title">Winter <span>Season</span></h2>
-                <p>Winter, a season of serene beauty, brings a hush over the land as snow blankets the earth. The air turns chilly, encouraging cozy moments by the fire. Trees stand bare, their branches like intricate silhouettes against the pale sky. It's a time for reflection and introspection.</p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
-                </div>
-              </div>
-              <div class="swiper-slide dark-layer">
-                <img src="images/bg3.jpg" alt="">
-                <div class="text-content">
-                    <h2 class="title">Spring <span>Season</span></h2>
-                <p>Spring, a season of renewal, awakens the world with a burst of life and color. Flowers bloom in a vibrant tapestry, and trees don new leaves in varying shades of green. The air carries a sense of freshness, and gentle rains nourish the earth. It's a time of growth and rejuvenation.</p>
-               <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/bg4.jpg" alt="">
-                <div class="text-content">
-                    <h2 class="title">Summer <span>Season</span></h2>
-                <p>Summer, a season of warmth and vitality, envelops the world in its embrace. The sun shines brightly, casting its golden rays upon everything below. Lush green landscapes stretch out under clear blue skies. The air is filled with the sounds of laughter and the scent of blooming flowers.</p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-slider-thumbs">
-            <div class="swiper-wrapper thumbs-container">
-              <img src="images/bg1.jpg" class="swiper-slide" alt="">
-              <img src="images/bg2.jpg" class="swiper-slide" alt="">
-              <img src="images/bg3.jpg" class="swiper-slide" alt="">
-              <img src="images/bg4.jpg" class="swiper-slide" alt="">
-            </div>
-          </div>
-    </section>
-
+</head>
+<body>
+    
     <section class="about section">
       <h2>Season's of the year:</h2>
         <div id="blog-container">
@@ -154,75 +103,10 @@
               </p>
           </article>
     </section>
+      
 
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <i class="fab fa-slack"></i>
-            <span class="logo_name">Blog Website</span>
-          </div>
-          <div class="media-icons">
-            <a href=""><i class="uil uil-facebook-f"></i></a>
-            <a href=""><i class="uil uil-twitter"></i></a>
-            <a href=""><i class="uil uil-instagram"></i></a>
-            <a href=""><i class="uil uil-linkedin"></i></a>
-            <a href=""><i class="uil uil-youtube"></i></a>
-            
-          </div>
-      </div>
-      <div class="link-boxes">
-        <ul class="box">
-          <li class="link_name">Company</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Get started </a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Services</li>
-          <li><a href="#">App design</a></li>
-          <li><a href="#">Web design</a></li>
-          <li><a href="#">Logo design</a></li>
-          <li><a href="#">Banner design</a></li>
-        </ul>
 
-        <ul class="box">
-          <li class="link_name">Account</li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">My account</a></li>
-          <li><a href="#">Prefrences</a></li>
-          <li><a href="#">Purchase</a></li>
-        </ul>
-        
-        <ul class="box">
-          <li class="link_name">Courses</li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Photoshop</a></li>
-        </ul>
-          
-        <ul class="box input-box">
-          <li class="link_name">Subscribe</li>
-          <li><input type="text" placeholder="Enter your email"></li>
-          <li><input type="button" value="subscribe"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="bottom-details">
-      <div class="bottom_text">
-        <span class="copyright_text">Copyright &copy; 2024 <a href="#">Blog Website</a>All rights reserved</span>
-          <span class="policy_terms">
-            <a href-"#">Privacy policy</a>
-            <a href="#">Terms & condition</a>
-          </span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="Js/swiper-bundle.min.js"></script>
-  <script src="Js/main.js"></script>
-
+    <script src="../Js/swiper-bundle.min.js"></script>
+    <script src="../Js/main.js"></script>
 </body>
 </html>
