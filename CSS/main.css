@@ -1,8 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    /* Add styles for your hero image here */
+    height: 400px; /* Set the height of your hero image */
+    position: relative;
+  }
+  
+  .moving-shape {
+    position: absolute;
+    bottom: 5%; /* Adjust the percentage as needed to position at the bottom */
+    left: 50%; /* Adjust the left position as needed */
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(236, 240, 33);
+    border-radius: 50%;
+    animation: moveShape 4s infinite alternate;
+    box-shadow: 0 0 20px #00fffb, 0 0 #0081bc;
+    transition: box-shadow 0.5s ease-in-out;
+    z-index: 2;
+  }
+  
+  .another-section {
+    /* Add styles for the section below the hero image here */
+    height: 400px; /* Set the height of the section */
+  }
+  
+  @keyframes moveShape {
+    to {
+      transform: translateX(100px);
+    }
+  }
+  
+  .moving-shape:hover {
+    box-shadow: 0 20px 20px rgba(90, 59, 228, 0.4);
+  }
+  
+  
+
+
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --white-color: #92bd6a;
+    --white-color: #0a0a0a;
     --dark-color: rgb(246, 251, 252);
     --body-bg-color: #fff;
     --section-bg-color: #202834;
@@ -557,7 +602,7 @@ header .nav-bar.sticky {
       object-fit: cover;
     }
   
-  }
+}
 
 
 * {
