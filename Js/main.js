@@ -34,3 +34,14 @@ function scrollToSection(sectionId) {
       section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+function toggleReadMore(button) {
+  var content = button.previousElementSibling; // Get the content div
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null; // If expanded, collapse
+    button.innerHTML = "Read more...";
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px"; // If collapsed, expand
+    button.innerHTML = "Read less";
+  }
+}

@@ -412,6 +412,14 @@ header .nav-bar.sticky {
 }
 
 
+/* Add your CSS styling here */
+.blog-content {
+    max-height: 100px; /* Set a maximum height for the initial display */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Add a smooth transition effect */
+  }
+
+
 .main {
     background: var(--background-secondary);
     padding: var(--py) 0;
