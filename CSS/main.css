@@ -39,9 +39,6 @@ body {
   .moving-shape:hover {
     box-shadow: 0 20px 20px rgba(90, 59, 228, 0.4);
   }
-  
-  
-
 
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -107,19 +104,12 @@ header.sticky {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-header .nav-bar {
+header .nav-bar ul {
+    list-style: none;
     position: relative;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 200px;
     transition: 0.3s ease;
-}
-
-.nav-close-btn,
-.nav-close-menu-btn {
-    display: none;
 }
 
 .nav-bar .Logo {
@@ -132,19 +122,14 @@ header .nav-bar {
     text-shadow: var(--text-shadow);
 }
 
-.navigation .nav-items a {
-    color: var(--white-color);
-    font-size: 1cm;
-    text-decoration: none;
-    text-shadow: var(--text-shadow);
-}
-
-.navigation .nav-items a i {
-    display: none;
-}
-
-.navigation .nav-items a:not(:last-child) {
-    margin-right: 45px;
+#menuIcon {
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    cursor: pointer;
+    z-index: 100;
 }
 
 /* Section Styles */

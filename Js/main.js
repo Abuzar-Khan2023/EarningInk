@@ -1,3 +1,8 @@
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navigation = document.querySelector("navigation");
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+
 var swiper = new Swiper(".bg-slider-thumbs", {
     loop: true,
     spaceBetween: 0,
@@ -16,9 +21,6 @@ window.addEventListener("scroll", function(){
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-const menuBtn = document.querySelector(".nav-menu-btn");
-const closeBtn = document.querySelector(".nav-close-btn");
-const navigation = document.querySelector("navigation");
 
 menuBtn.addEventListener("click", () => {
   navigation.classList.remove("active");
@@ -35,13 +37,10 @@ function scrollToSection(sectionId) {
   }
 }
 
-function toggleReadMore(button) {
-  var content = button.previousElementSibling; // Get the content div
-  if (content.style.maxHeight) {
-    content.style.maxHeight = null; // If expanded, collapse
-    button.innerHTML = "Read more...";
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px"; // If collapsed, expand
-    button.innerHTML = "Read less";
-  }
-}
+document.querySelector('.nav-menu-btn').addEventListener('click', function () {
+  document.querySelector('.navigation').style.display = 'flex';
+});
+
+document.querySelector('.nav-close-btn').addEventListener('click', function () {
+  document.querySelector('.navigation').style.display = 'none';
+});
