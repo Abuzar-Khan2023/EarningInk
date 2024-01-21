@@ -112,14 +112,24 @@ body {
 .container .form .inputBox input[type="submit"] {
   background: #00dfc4;
   color: #223243;
-  padding: 10px 0;
+  padding: 10px 20px;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.35),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
+
+.container .form .inputBox input[type="submit"]:hover {
+  box-shadow: 0 0 30px #00fffb, 0 0 60px #0081bc;
+}
+
+.container .form .inputBox input[type="submit"]:active {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+
 
 .container .form p {
   color: rgba(255, 255, 255, 0.5);

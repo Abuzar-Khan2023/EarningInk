@@ -8,25 +8,30 @@
 </head>
 <body>
 	<div class="container">
-		<div class="form signup">
+		<div class="form signup" id="LoginForm">
 			<h2>Sign Up</h2>
 			<div class="inputBox">
-				<input type="text" required="required">
+				<input type="text" id="name" required="required">
+				<i class="fa-regular fa-user"></i>
+				<span>Full name</span>
+			</div>
+			<div class="inputBox">
+				<input type="text" id="username" required="required">
 				<i class="fa-regular fa-user"></i>
 				<span>username</span>
 			</div>
 			<div class="inputBox">
-				<input type="text" required="required">
+				<input type="email" id="email"  required="required">
 				<i class="fa-regular fa-envelope"></i>
 				<span>email address</span>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" id="password" required="required">
 				<i class="fa-solid fa-lock"></i>
 				<span>create password</span>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" id="Cpassword" required="required">
 				<i class="fa-solid fa-lock"></i>
 				<span>confirm password</span>
 			</div>
@@ -36,15 +41,15 @@
 			<p>Already a member ? <a href="#" class="login">Log in</a></p>
 		</div>
 		
-		<div class="form signin">
+		<div class="form signin" id="LoginForm">
 			<h2>Sign In</h2>
 			<div class="inputBox">
-				<input type="text" required="required">
+				<input type="text" id="Lusername" required="required">
 				<i class="fa-regular fa-user"></i>
-				<span>username</span>
+				<span>username / email</span>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" id="Lpassword" required="required">
 				<i class="fa-solid fa-lock"></i>
 				<span>password</span>
 			</div>
@@ -57,6 +62,8 @@
 	</div>
 
 	<script src="../Js/LogSig.js"></script>
+	<script src="../Js/Firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 
 </body>
 </html>

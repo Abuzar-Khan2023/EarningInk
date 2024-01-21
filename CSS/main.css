@@ -104,7 +104,7 @@ header.sticky {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-header .nav-bar ul {
+header .nav-bar {
     list-style: none;
     position: relative;
     width: 100%;
@@ -122,15 +122,16 @@ header .nav-bar ul {
     text-shadow: var(--text-shadow);
 }
 
-#menuIcon {
-    width: 60px;
-    border-radius: 50%;
-    position: fixed;
-    top: 40px;
-    right: 60px;
-    cursor: pointer;
-    z-index: 100;
+.nav-items a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+    transition: text-shadow 0.5s, transform 0.5s;
 }
+
 
 /* Section Styles */
 .section {

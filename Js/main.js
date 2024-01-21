@@ -36,11 +36,3 @@ function scrollToSection(sectionId) {
       section.scrollIntoView({ behavior: 'smooth' });
   }
 }
-
-document.querySelector('.nav-menu-btn').addEventListener('click', function () {
-  document.querySelector('.navigation').style.display = 'flex';
-});
-
-document.querySelector('.nav-close-btn').addEventListener('click', function () {
-  document.querySelector('.navigation').style.display = 'none';
-});
