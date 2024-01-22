@@ -1066,8 +1066,8 @@ footer .content .link-boxes .box {
     width: calc(100% + 55px);
     outline: none;
     border: 2px solid #afafb6;
-    background: #eaeaea;
-    border-radius: 4px;
+    background: #353131;
+    border-radius: 50px;
     padding: 0 15px;
     font-size: 15px;
     color: #fff;
@@ -1079,20 +1079,24 @@ footer .content .link-boxes .box {
     font-size: 16px;
 }
 
-.link-boxes .input-box input[type = "button"] {
-    background: #fff;
-    color: #3824d2;
-    border: none;
-    font-size: 18px;
+.link-boxes .input-box input[type="button"] {
+    background: #00dfc4;
+    color: #223243;
+    padding: 10px 20px;
     font-weight: 500;
-    margin: 4px 0;
-    opacity: 0.8;
     cursor: pointer;
-    transform: all 0.4s ease;
+    box-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
-
-.input-box input[type = "button"]:hover {
-    opacity: 1;
+  
+.input-box input[type="button"]:hover {
+    box-shadow: 0 0 30px #00fffb, 0 0 60px #0081bc;
+}
+  
+.input-box input[type="button"]:active {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
 }
 
 footer .bottom-details {

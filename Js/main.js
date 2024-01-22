@@ -36,3 +36,18 @@ function scrollToSection(sectionId) {
       section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // You can add your custom logic here, such as form validation or submitting the form data.
+  // For simplicity, let's just log the form data to the console.
+  const formData = new FormData(event.target);
+  const formObject = {};
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
+  console.log(formObject);
+
+  // You can replace the console.log above with your own logic to handle the form data.
+});
