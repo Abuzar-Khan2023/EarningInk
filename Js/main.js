@@ -51,3 +51,19 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   // You can replace the console.log above with your own logic to handle the form data.
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuButton = document.getElementById('mobile-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  // Check if the screen size is less than or equal to 768 pixels (adjust as needed)
+  if (window.innerWidth <= 768) {
+      mobileMenuButton.addEventListener('click', function () {
+          mobileNav.classList.toggle('show');
+      });
+  }
+});
+
+window.onscroll = function() {
+  scrollFunction();
+};

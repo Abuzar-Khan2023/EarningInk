@@ -166,3 +166,24 @@ body {
   color: #fff;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%; /* Adjust the width as needed */
+  }
+
+  .container .form {
+    width: 100%;
+  }
+
+  .container .form .inputBox input {
+    width: calc(100% - 20px);
+  }
+
+  .container .form .inputBox i {
+    left: 10px;
+  }
+
+  .container .form .inputBox input[type="submit"] {
+    width: 100%;
+  }
+}
