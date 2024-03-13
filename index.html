@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="path/to/icon-font-library.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>EarningInk.com | Earning from Writing</title>
+    
 </head>
 <body>
   
@@ -59,13 +61,16 @@
         <i class="material-icons md-36">mail</i></a>
       </div>
       <div class="btn">
-        <a href="./HTML/Login_SignUp.html">
-        <i class="material-icons md-36">login</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/Login_SignUp.html">
-        <i class="material-icons md-36">person_add</i></a>
-      </div>
+        <a href="./HTML/Login_SignUp.html#login">
+            <i class="material-icons md-36">login</i>
+        </a>
+    </div>
+    <div class="btn">
+        <a href="./HTML/Login_SignUp.html#register">
+            <i class="material-icons md-36">person_add</i>
+        </a>
+    </div>
+    
     </label>
   </div>
 
@@ -77,7 +82,7 @@
                 <div class="text-content">
                   <h2 class="title">Technology <span>Igniting Tomorrow's Progress</span></h2>
                 <p>Explore the ever-evolving world of technology, where we unravel the latest breakthroughs and trends shaping our digital landscape. From artificial intelligence to cybersecurity, join us in navigating the forefront of innovation that is transforming the way we live and work. </p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="window.location.href='HTML/Main_Topic_Blogs/Technology.html'">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
@@ -85,7 +90,7 @@
                 <div class="text-content">
                   <h2 class="title">Health <span>Nurturing Your Mind and Body</span></h2>
                 <p>Dive into the realm of well-being as we discuss topics ranging from physical fitness to mental health. Discover expert insights, practical tips, and the latest research to empower you on your journey toward a healthier and more balanced lifestyle.</p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="window.location.href=''">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
@@ -93,7 +98,7 @@
                 <div class="text-content">
                   <h2 class="title">Environment <span>Harmony with the Planet</span></h2>
                 <p>Engage in conversations that matter for our planet. Explore the challenges of climate change and discover sustainable living practices. Uncover eco-friendly solutions, conservation efforts, and learn how small actions can collectively make a significant impact on our environment.</p>
-               <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="window.location.href=''">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -101,7 +106,7 @@
                 <div class="text-content">
                   <h2 class="title">Lifestyle <span>Cultivating a Fulfilling Life</span></h2>
                 <p>Embark on a journey of self-discovery and growth. From enhancing your personal and professional skills to building positive habits, our discussions aim to inspire and guide you in various aspects of life. Elevate your lifestyle through practical advice and motivation for continuous improvement.</p>
-                <button class="read-btn" onclick="scrollToSection('#blog-post')">Read more <i class="uil uil-arrow-right"></i></button>
+                <button class="read-btn" onclick="window.location.href=''">Read more <i class="uil uil-arrow-right"></i></button>
                 </div>
               </div>
             </div>
@@ -586,72 +591,15 @@
 
     </div>
 
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <i class="fab fa-slack"></i>
-            <span class="logo_name">EarningInk</span>
-          </div>
+    <div id="footer-container"></div>
 
-          <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fac fa-X"></i>X</a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-
-      </div>
-      <div class="link-boxes">
-        <ul class="box">
-          <li class="link_name">Quick Links</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Blogs </a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Services</li>
-          <li><a href="#">App design</a></li>
-          <li><a href="#">Web design</a></li>
-          <li><a href="#">Logo design</a></li>
-          <li><a href="#">Banner design</a></li>
-        </ul>
-
-        <ul class="box">
-          <li class="link_name">Account</li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">My account</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
-        </ul>
-        
-        <ul class="box">
-          <li class="link_name">Courses</li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Photoshop</a></li>
-        </ul>
-          
-        <ul class="box input-box">
-          <li class="link_name">Subscribe</li>
-          <li><input type="text" placeholder="Enter your email"></li>
-          <li><input type="button" value="subscribe"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="bottom-details">
-      <div class="bottom_text">
-        <span class="copyright_text">Copyright &copy; 2024 <a href="#">EarningInk</a>All rights reserved</span>
-          <span class="policy_terms">
-            <a href-"#">Privacy policy</a>
-            <a href="#">Terms & condition</a>
-          </span>
-      </div>
-    </div>
-  </footer>
+    <script>
+       fetch('./HTML/footer.html')
+          .then(response => response.text())
+          .then(html => {
+             document.getElementById('footer-container').innerHTML = html;
+          });
+    </script>
   
   <script src="./Js/swiper-bundle.min.js"></script>
   <script src="./Js/main.js"></script>
