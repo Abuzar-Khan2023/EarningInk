@@ -56,221 +56,211 @@ body {
     --scroll-thumb-hover-color: #454f6b;
 }
   
-@media only screen and (max-width: 767px) {
-    .mobile-menu {
-      position: absolute;
-      top: 10px; /* Adjust the top position according to your needs */
-      right: 10px; /* Adjust the right position according to your needs */
-      transform: translateY(50%);
-      z-index: 1000;
-    }
-  }
-  
-  /* Styles for desktop version */
-  @media only screen and (min-width: 768px) {
-    .mobile-menu {
-      display: none; /* Hide the menu on desktop */
-    }
-  }
-  
 
-  
-  .btn {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.mobile-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.menu-items {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  padding: 20px;
+  display: none; /* Hidden by default */
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {
+      display: none;
   }
   
-  .material-icons.md-36 {
-    font-size: 36px;
-    color: #03A9F4;
+  .menu-items {
+      position: static;
+      transform: none;
+      background-color: transparent;
+      border-radius: 0;
+      padding: 0;
   }
-  
-  .input-burgure {
-    position: absolute;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure the button stays above other content */
+}
+
+/* Update position of the hamburger button */
+.menuBtn {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+/* Update positioning and animations of the menu items */
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  position: fixed;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.btn:not(:first-child) {
+  opacity: 0;
+  z-index: -2;
+  transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+.btn:nth-child(2) {
+  top: -50px;
+  transition-delay: 0s;
+}
+
+.btn:nth-child(3) {
+  top: -100px;
+  left: 100px;
+  transition-delay: 0.1s;
+}
+
+/* Add styles for the black background when menu is open */
+.input-burgure:checked ~ #show-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 999; /* Ensure it covers other content */
+}
+
+/* Add styles for the hamburger menu animation */
+.input-burgure:checked ~ #show-menu .btn {
+  opacity: 1;
+  z-index: 1;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.menu-items {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  padding: 20px;
+  display: none; /* Hidden by default */
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu {
     display: none;
   }
   
-  *{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  .menu-items {
+    position: static;
+    transform: none;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
   }
-  
-  .menu {
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-  }
-  
-  .btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 70px;
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .material-icons.md-36 {
-    font-size: 36px;
-    color: #faf608;
-  }
-  
-  .btn {
-    
-    font-size: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  
-    -webkit-transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  }
-  
-  .btn:not(:first-child) {
-    opacity: 0;
-    z-index: -2;
-  
-    -webkit-transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
-    transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
-  }
-  
-  .btn:nth-child(2) {
-    top: 0px;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-  }
-  
-  .btn:nth-child(3) {
-    top: 0px;
-    left: 0px;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-  }
-  
-  .btn:nth-child(4) {
-    left: 0px;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  
-  .btn:nth-child(5) {
-    top: 0px;
-    left: 0px;
-    -webkit-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-  }
-  
-  .btn:nth-child(6) {
-    top: 0px;
-    -webkit-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-  
-  .btn:nth-child(7) {
-    top: 0px;
-    left: 0px;
-    -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-  }
-  
-  .btn:nth-child(8) {
-    left: 0px;
-    -webkit-transition-delay: 0.6s;
-    transition-delay: 0.6s;
-  }
-  
-  .btn:nth-child(9) {
-    top: 0px;
-    left: 0px;
-    -webkit-transition-delay: 0.7s;
-    transition-delay: 0.7s;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(2) {
-    top: -150px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(3) {
-    top: -100px;
-    left: 100px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(4) {
-    left: 150px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(5) {
-    top: 100px;
-    left: 100px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(6) {
-    top: 150px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(7) {
-    top: 100px;
-    left: -100px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(8) {
-    left: -150px;
-    opacity: 1;
-  }
-  
-  input#toggle:checked~#show-menu .btn:nth-child(9) {
-    top: -100px;
-    left: -100px;
-    opacity: 1;
-  }
-  
-  .menuBtn,
-  .closeBtn {
-    position: absolute;
-    transition: all 0.3s ease;
-  }
-  
-  .closeBtn {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  
-  input#toggle:checked~#show-menu .btn .menuBtn {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  
-  input#toggle:checked~#show-menu .btn .closeBtn {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure the button stays above other content */
+}
+
+.menuBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  color: #faf608;
+}
+
+.menuBtn,
+.closeBtn {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.closeBtn {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.input-burgure:checked ~ #show-menu .menuBtn {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.input-burgure:checked ~ #show-menu .closeBtn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.input-burgure:checked ~ #show-menu .btn {
+  opacity: 1;
+  z-index: 1;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(2) {
+  top: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(3) {
+  top: 0;
+  left: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(4) {
+  left: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(5) {
+  top: 0;
+  left: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(6) {
+  top: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(7) {
+  top: 0;
+  left: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(8) {
+  left: 0;
+}
+
+.input-burgure:checked ~ #show-menu .btn:nth-child(9) {
+  top: 0;
+  left: 0;
+}
+
   
 
 /* Scrollbar Styles */

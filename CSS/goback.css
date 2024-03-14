@@ -4,17 +4,16 @@
     left: 0;
     width: 100%;
     background-size: cover;
-     backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
+    backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
     height: 60px; /* Set the desired height for your navigation bar */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Styles for the button */
 .go-back-button {
     padding: 10px 48%;
-    font-size: 16px;
+    font-size: 1vw;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
@@ -24,4 +23,11 @@
 
 .go-back-button:hover {
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media only screen and (max-width: 600px) {
+    .go-back-button {
+        padding: 2% 15%; /* Adjust as needed */
+        font-size: 2.5vw; /* Adjust as needed */
+    }
 }
