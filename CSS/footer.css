@@ -24,7 +24,7 @@ footer {
     left: 0;
 }
 
-footer::before {
+/* footer::before {
     content: " ";
     position: absolute;
     left: 0;
@@ -32,7 +32,7 @@ footer::before {
     height: 1px;
     width: 100%;
     background: #afafb6;
-}
+} */
 
 footer .content {
     max-width: 1250px;
