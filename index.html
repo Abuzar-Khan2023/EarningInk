@@ -598,7 +598,7 @@
     <div id="footer-container"></div>
 
     <script>
-       fetch('./HTML/footer.html')
+       fetch('/HTML/footer.html')
           .then(response => response.text())
           .then(html => {
              document.getElementById('footer-container').innerHTML = html;
