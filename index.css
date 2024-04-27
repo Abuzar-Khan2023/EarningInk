@@ -489,9 +489,19 @@ header .nav-bar.sticky {
     text-align: center;
   }
   
-  .blog-card-group { margin-bottom: 3rem; }
+  .blog-card-group { 
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    /* bottom: 3rem;  */
+  
+  }
   
   .blog-card {
+    display: flex;
+    flex-direction: column;
+
     background: var(--background-primary);
     padding: 10px;
     margin-bottom: 1rem;

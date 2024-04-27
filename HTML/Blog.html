@@ -4,182 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Blog.css">
-    <title>Blogs | EarningInk </title>
+    <title>Blogs | EarningInk</title>
 </head>
 <body>
 
-  <div id="goBackContainer"></div>
+<div id="goBackContainer"></div>
 
-  <script>
-      fetch('goback.html')
-          .then(response => response.text())
-          .then(html => {
-              document.getElementById('goBackContainer').innerHTML = html;
-          });
-  </script>
-  
-  <div id="blog"></div>
+<script>
+    fetch('goback.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('goBackContainer').innerHTML = html;
+        });
+</script>
 
-  <div id="footer-container"></div>
+<div id="blog"></div>
 
-  <script>
+<div id="footer-container"></div>
+
+<script>
     // Data source
     const blogs = [
-     {
-        image: '../Images/blog-1.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database This NoSQL database oriented to documents (by documents like JSON) combines some of the features from relational databases, easy to use and the multi-platform is the best option for scale up and have fault tolerance, load balancing, map reduce, etc. to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      }, 
-      
-      {
-        image: '../Images/blog-2.png',
-        topic: 'Web Performance',
-        title: 'Building microservices with Fast web page loading on a $20 feature phone, MongoDB & Docker',
-        description: 'This Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in developing countries to leverage the web. Think of them as a light version of a smart phone. database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-      
-      {
-        image: '../Images/blog-3.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-4.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-5.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-6.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-7.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-8.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-9.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
-
-      {
-        image: '../Images/blog-10.png',
-        topic: 'Database',
-        title: 'Building microservices with Dropwizard, MongoDB & Docker',
-        description: 'This NoSQL database oriented to documents combines features...',
-        author: 'Abuzar Khan',
-        date: 'Jan 17, 2022',
-        time: '3 min'
-      },
+        {
+            image: '../Images/blog-1.png',
+            topic: 'Database',
+            title: 'Building microservices with Dropwizard, MongoDB & Docker',
+            description: 'This NoSQL database oriented to documents (by documents like JSON) combines some of the features from relational databases, easy to use and the multi-platform is the best option for scale up and have fault tolerance, load balancing, map reduce, etc. to documents combines features...',
+            author: 'Abuzar Khan',
+            date: 'Jan 17, 2022',
+            time: '3 min'
+        },
+        {
+            image: '../Images/blog-2.png',
+            topic: 'Web Performance',
+            title: 'Building microservices with Fast web page loading on a $20 feature phone, MongoDB & Docker',
+            description: 'This Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in developing countries to leverage the web. Think of them as a light version of a smart phone. database oriented to documents combines features...',
+            author: 'Abuzar Khan',
+            date: 'Jan 17, 2022',
+            time: '3 min'
+        },
+        // Add more blog entries here
     ];
 
     // Function to generate blog cards
     function generateBlogCards() {
-      const blogContainer = document.getElementById('blog');
-      let blogCardsHTML = '';
+        const blogContainer = document.getElementById('blog');
+        let blogCardsHTML = '';
 
-      function generateBlogCards() {
-  const blogContainer = document.getElementById('blog');
-  let blogCardsHTML = '';
-
-  blogs.slice(0, 10).forEach(blog => { // Only first 10 blogs
-    // Get current date and time
-    const currentDate = new Date().toISOString().split('T')[0];
-    const currentTime = new Date().toISOString().split('T')[1].split('.')[0];
-    const blogDate = new Date(blog.date).toISOString().split('T')[0];
-    const blogTime = new Date(blog.date).toISOString().split('T')[1].split('.')[0];
-    const currentDateTime = `${currentDate} ${currentTime}`;
-    const blogDateTime = `${blogDate} ${blogTime}`;
-    const timeDiff = new Date(currentDateTime).getTime() - new Date(blogDateTime).getTime();
-    const timeDiffInMinutes = Math.floor(timeDiff / (1000 * 60));
-    const timeDiffInHours = Math.floor(timeDiffInMinutes / 60);
-    const timeDiffInDays = Math.floor(timeDiffInHours / 24);
-    const timeDiffInMonths = Math.floor(timeDiffInDays / 30);
-    const timeDiffInYears = Math.floor(timeDiffInMonths / 12);
-
-      blogs.slice(0, 10).forEach(blog => { // Only first 10 blogs
-        blogCardsHTML += `
-          <div class="blog-card">
-            <div class="blog-card-banner">
-              <img src="${blog.image}" alt="${blog.title}" width="250" class="blog-banner-img">
-            </div>
-            <div class="blog-content-wrapper">
-              <button class="blog-topic text-tiny">${blog.topic}</button>
-              <h3><a href="#" class="h3">${blog.title}</a></h3>
-              <p class="blog-text">${blog.description}</p>
-              <div class="wrapper-flex">
-                <div class="profile-wrapper">
-                  <img src="../Images/author.png" alt="${blog.author}" width="50">
+        blogs.slice(0, 10).forEach(blog => { // Only first 10 blogs
+            blogCardsHTML += `
+                <div class="blog-card">
+                    <div class="blog-card-banner">
+                        <img src="${blog.image}" alt="${blog.title}" width="250" class="blog-banner-img">
+                    </div>
+                    <div class="blog-content-wrapper">
+                        <button class="blog-topic text-tiny">${blog.topic}</button>
+                        <h3><a href="#" class="h3">${blog.title}</a></h3>
+                        <p class="blog-text">${blog.description}</p>
+                        <div class="wrapper-flex">
+                            <div class="profile-wrapper">
+                                <img src="../Images/author.png" alt="${blog.author}" width="50">
+                            </div>
+                            <div class="wrapper">
+                                <a href="#" class="h4">${blog.author}</a>
+                                <p class="text-sm">
+                                    <time datetime="${blog.date}">${blog.date}</time>
+                                    <span class="separator"></span>
+                                    <ion-icon name="time-outline"></ion-icon>
+                                    <time datetime="PT${blog.time.charAt(0)}M">${blog.time}</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="wrapper">
-                  <a href="#" class="h4">${blog.author}</a>
-                  <p class="text-sm">
-                    <time datetime="${blog.date}">${blog.date}</time>
-                    <span class="separator"></span>
-                    <ion-icon name="time-outline"></ion-icon>
-                    <time datetime="PT${blog.time.charAt(0)}M">${blog.time}</time>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      });
+            `;
+        });
 
-      blogContainer.innerHTML = blogCardsHTML;
+        blogContainer.innerHTML = blogCardsHTML;
     }
 
     // Call the function to generate blog cards
@@ -191,7 +92,7 @@
         .then(html => {
             document.getElementById('footer-container').innerHTML = html;
         });
-  </script>
-    
+</script>
+
 </body>
 </html>

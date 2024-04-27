@@ -1,0 +1,245 @@
+/* CSS for Explore page */
+
+/* General styles */
+
+
+.explore-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+} 
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* Search bar styles */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Category box styles */
+.category-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px;
+}
+
+.category-box {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    transition: background-image 0.3s ease;
+}
+
+.category-box:hover {
+    background-image: none;
+}
+
+.category-box:hover img {
+    opacity: 0.8;
+}
+
+.category-box img {
+    transition: opasity 1s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.category-box ul li {
+    font-size: 1em;
+}
+
+.category-box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 10px;
+    text-align: center;
+
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.category-box:hover .content {
+    opacity: 1;
+}
+
+.category-box h2 {
+    margin-bottom: 10px;
+}
+
+.category-box ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.category-box ul li {
+    margin-bottom: 5px;
+}
+
+.category-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+.category-box.technology,
+.category-box.health,
+.category-box.environment,
+.category-box.lifestyle {
+    border: 2px solid blue;
+}
+
+.category-box.technology:hover,
+.category-box.health:hover,
+.category-box.environment:hover,
+.category-box.lifestyle:hover {
+    background-image: none;
+}
+
+.category-box.technology {
+    border: 2px solid blue;
+    background-image: url('/Images/hm1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.category-box.health {
+    border: 2px solid blue;
+    background-image: url('/Images/hm2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.category-box.environment {
+    border: 2px solid blue;
+    background-image: url('/Images/hm3.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.category-box.lifestyle {
+    border: 2px solid blue;
+    background-image: url('/Images/hm4.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+} */
+
+
+/* Tags box styles */
+.tags-box {
+    margin-top: 20px;
+    position: relative;
+}
+
+.topic {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.topic-tags {
+    text-align: right;
+}
+
+.goal-box {
+    display: inline-block;
+}
+
+.tag, .tags-box ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tag, .tags-box ul li a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover, .tags-box ul li a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .explore-container {
+        padding: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 60%;
+    }
+
+    .category-box, .tags-box {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}

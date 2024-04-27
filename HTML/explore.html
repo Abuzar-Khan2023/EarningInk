@@ -1,1 +1,103 @@
-<h1>Comming Soon...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/explore.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <title>Explore | EarningInk</title>
+</head>
+<body>
+
+<div class="explore-container">
+    <div class="search-bar">
+        <input type="text" placeholder="Search blogs...">
+        <button>Search</button>
+    </div>
+    <div class="category-boxes">
+        <div class="category-box technology">
+            <div class="content">
+                <h2>Technology</h2>
+                <ul>
+                    <li><a href="#">Programming</a></li>
+                    <li><a href="#">Software Development</a></li>
+                    <li><a href="#">Tech Trends</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category-box health">
+            <div class="content">
+                <h2>Health</h2>
+                <ul>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Nutrition</a></li>
+                    <li><a href="#">Mental Health</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category-box environment">
+            <div class="content">
+                <h2>Environment</h2>
+                <ul>
+                    <li><a href="#">Climate Change</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Conservation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="category-box lifestyle">
+            <div class="content">
+                <h2>Lifestyle</h2>
+                <ul>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Food</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tags-box">
+        <h2>Tags</h2>
+        <div class="goal-box">
+            <a href="#" class="tag">Technology</a>
+            <ul>
+                <li><a href="#">Programming</a></li>
+                <li><a href="#">Technical</a></li>
+                <li><a href="#">Information</a></li>
+            </ul>
+            <a href="#" class="tag">Environment</a>
+            <ul>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Forest</a></li>
+                <li><a href="#">Places</a></li>
+            </ul>
+            <a href="#" class="tag">Lifestyle</a>
+            <ul>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+            <a href="#" class="tag">Health</a>
+            <ul>
+                <li><a href="#">Exersise</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Desease</a></li>
+            </ul>
+            <!-- Add more tags as needed -->
+        </div>
+    </div>
+</div>
+
+<div id="footer-container"></div>
+
+<script>
+   fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+         document.getElementById('footer-container').innerHTML = html;
+      });
+</script>
+
+</body>
+</html>
