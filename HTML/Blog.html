@@ -18,81 +18,21 @@
         });
 </script>
 
-<div id="blog"></div>
+<div id="blog" class="blog-card-group">
+      
+</div>
 
 <div id="footer-container"></div>
 
-<script>
-    // Data source
-    const blogs = [
-        {
-            image: '../Images/blog-1.png',
-            topic: 'Database',
-            title: 'Building microservices with Dropwizard, MongoDB & Docker',
-            description: 'This NoSQL database oriented to documents (by documents like JSON) combines some of the features from relational databases, easy to use and the multi-platform is the best option for scale up and have fault tolerance, load balancing, map reduce, etc. to documents combines features...',
-            author: 'Abuzar Khan',
-            date: 'Jan 17, 2022',
-            time: '3 min'
-        },
-        {
-            image: '../Images/blog-2.png',
-            topic: 'Web Performance',
-            title: 'Building microservices with Fast web page loading on a $20 feature phone, MongoDB & Docker',
-            description: 'This Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in developing countries to leverage the web. Think of them as a light version of a smart phone. database oriented to documents combines features...',
-            author: 'Abuzar Khan',
-            date: 'Jan 17, 2022',
-            time: '3 min'
-        },
-        // Add more blog entries here
-    ];
-
-    // Function to generate blog cards
-    function generateBlogCards() {
-        const blogContainer = document.getElementById('blog');
-        let blogCardsHTML = '';
-
-        blogs.slice(0, 10).forEach(blog => { // Only first 10 blogs
-            blogCardsHTML += `
-                <div class="blog-card">
-                    <div class="blog-card-banner">
-                        <img src="${blog.image}" alt="${blog.title}" width="250" class="blog-banner-img">
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <button class="blog-topic text-tiny">${blog.topic}</button>
-                        <h3><a href="#" class="h3">${blog.title}</a></h3>
-                        <p class="blog-text">${blog.description}</p>
-                        <div class="wrapper-flex">
-                            <div class="profile-wrapper">
-                                <img src="../Images/author.png" alt="${blog.author}" width="50">
-                            </div>
-                            <div class="wrapper">
-                                <a href="#" class="h4">${blog.author}</a>
-                                <p class="text-sm">
-                                    <time datetime="${blog.date}">${blog.date}</time>
-                                    <span class="separator"></span>
-                                    <ion-icon name="time-outline"></ion-icon>
-                                    <time datetime="PT${blog.time.charAt(0)}M">${blog.time}</time>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
-
-        blogContainer.innerHTML = blogCardsHTML;
-    }
-
-    // Call the function to generate blog cards
-    generateBlogCards();
-
+    <script>
     // Fetch footer
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
             document.getElementById('footer-container').innerHTML = html;
-        });
-</script>
+            });
+    </script>
+    <script src="/Js/Blog.js"></script>
 
 </body>
 </html>
