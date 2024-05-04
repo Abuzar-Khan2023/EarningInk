@@ -652,40 +652,53 @@ header .nav-bar.sticky {
     gap: 0;
   }
 
-
-  @media (min-width: 550px) {
-
-    :root {
-  
-      /**
-       * typography 
-       */
-  
-      --fs-base: 0.90rem;
-  
+  @media (max-width: 550px) {
+    .blog-card {
+      grid-template-columns: 1fr;
     }
   
-  
-    /**
-     * BLOG 
-     */
-  
-    .blog-card {
-      display: grid;
-      grid-template-columns: 3fr 4fr;
-      gap: 20px;
+    .blog-card .wrapper {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
     }
   
     .blog-card-banner {
-      display: block;
-      overflow: hidden;
-      border-radius: 5px;
+      border-radius: 0;
     }
   
-    .blog-banner-img {
-      width:  100%;
-      height: 100%;
-      object-fit: cover;
+    .blog-card .h2 {
+      text-align: left;
+      padding-left: 0;
     }
   
-}
+    .blog-card .h2::before {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 551px) and (max-width: 768px) {
+    .blog-card {
+      grid-template-columns: 1fr;
+    }
+  
+    .blog-card .wrapper {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+    }
+  
+    .blog-card-banner {
+      border-radius: 0;
+    }
+  
+    .blog-card .h2 {
+      text-align: left;
+      padding-left: 0;
+    }
+  
+    .blog-card .h2::before {
+      display: none;
+    }
+  }
+  
