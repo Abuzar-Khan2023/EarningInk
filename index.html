@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/CSS/footer.css">
-    <link rel="stylesheet" href="./CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/CSS/swiper-bundle.min.css">
     <link rel="stylesheet" href="path/to/icon-font-library.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -33,48 +33,25 @@
       </div>
     </div>
   </header>
-  
-  <div class="menu mobile-menu">
-    <input class="input-burgure" type="checkbox" id="toggle">
-    <label id="show-menu" for="toggle">
-      <div class="btn">
-        <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
-        <i class="material-icons md-36 toggleBtn closeBtn">close</i>
-      </div>
-      <div class="btn">
-        <a href="./index.html">
-        <i class="material-icons md-36">home</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/Blog.html">
-        <i class="material-icons md-36">article</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/explore.html">
-        <i class="material-icons md-36">explore</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/about.html">
-        <i class="material-icons md-36">info</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/contactForm.html">
-        <i class="material-icons md-36">mail</i></a>
-      </div>
-      <div class="btn">
-        <a href="./HTML/Login_SignUp.html#login">
-            <i class="material-icons md-36">login</i>
-        </a>
-    </div>
-    <div class="btn">
-        <a href="./HTML/Login_SignUp.html#register">
-            <i class="material-icons md-36">person_add</i>
-        </a>
-    </div>
-    
-    </label>
-  </div>
 
+  <!-- Mobile Nav-Bar
+  <header>
+    <div class="nav-bar">
+        <a href="#" class="Logo">EarningInk</a>
+        <input type="checkbox" id="toggle" class="input-burger">
+        <label for="toggle" class="toggleBtn menuBtn"><i class="fas fa-bars"></i></label>
+        <label for="toggle" class="toggleBtn closeBtn"><i class="fas fa-times"></i></label>
+        <nav id="show-menu" class="navigation">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Services</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header> -->
+  
     <section id="Home" class="home">
         <div class="swiper bg-slider">
             <div class="swiper-wrapper">
@@ -141,6 +118,7 @@
     </script>
   
   <script src="/Js/swiper-bundle.min.js"></script>
+  <script src="/Js/Humburgur.js"></script>
   <script src="/Js/main.js"></script>
   <script src="/Js/Blog.js"></script>
 
