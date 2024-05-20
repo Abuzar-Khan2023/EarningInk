@@ -1,9 +1,9 @@
-body {
+/* body {
     overflow-y: auto;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-  }
+  } */
 
   img {
     width: 100%;
@@ -52,17 +52,31 @@ body {
 /* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 :root {
-    --white-color: #0a0a0a;
-    --dark-color: rgb(246, 251, 252);
-    --body-bg-color: #fff;
-    --section-bg-color: #202834;
-    --navigation-item-hover-color: #3b5378;
-    --text-shadow: rgb(0, 0, 0, 0.1);
-    --scroll-bar-color: #fff;
-    --scroll-thumb-color: #282f4e;
-    --scroll-thumb-hover-color: #454f6b;
+  --white-color: #0a0a0a;
+  --dark-color: rgb(246, 251, 252);
+  --body-bg-color: #000; /* Change background color to black */
+  --section-bg-color: #202834;
+  --navigation-item-hover-color: #3b5378;
+  --text-shadow: rgb(0, 0, 0, 0.1);
+  --scroll-bar-color: #fff;
+  --scroll-thumb-color: #282f4e;
+  --scroll-thumb-hover-color: #454f6b;
 }
+
+body {
+  background: var(--body-bg-color); /* Set body background to black */
+}
+
+footer {
+  background: #fff; /* Set footer background to white */
+}
+
+.blog-card {
+  background: var(--section-bg-color);
+}
+
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
@@ -735,5 +749,4 @@ header .nav-bar.sticky {
   .blog-card .h2::before {
       display: none;
   }
-}
-  
+} 
