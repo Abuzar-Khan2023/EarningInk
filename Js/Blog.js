@@ -91,10 +91,30 @@ const blogData = [
       "authorSrc": "/Images/author.png",
       "date": "Sep 21, 2021",
       "duration": "4 min"
+    },
+    {
+      "bannerSrc": "/Images/blog-10.png",
+      "topic": "Database",
+      "title": "How to connect a React frontend with a NodeJS/Express backend",
+      "description": "The MERN (MongoDB, Express, React, NodeJS) stack is very popular for making full stack applications, utilizing Javascript for both the backend and frontend as well as a document-oriented or non relational database (MongoDB), meaning that it's structured like JSON rather than a large excel sheet like SQL databases are.",
+      "author": "Abuzar Khan",
+      "authorSrc": "/Images/author.png",
+      "date": "Sep 21, 2021",
+      "duration": "4 min"
+    },
+
+    {
+      "bannerSrc": "/Images/blog-10.png",
+      "topic": "Database",
+      "title": "How to connect a React frontend with a NodeJS/Express backend",
+      "description": "The MERN (MongoDB, Express, React, NodeJS) stack is very popular for making full stack applications, utilizing Javascript for both the backend and frontend as well as a document-oriented or non relational database (MongoDB), meaning that it's structured like JSON rather than a large excel sheet like SQL databases are.",
+      "author": "Abuzar Khan",
+      "authorSrc": "/Images/author.png",
+      "date": "Sep 21, 2021",
+      "duration": "4 min"
     }
   ];  
   
-  // Function to create a blog card
   function createBlogCard(data) {
     const card = document.createElement("div");
     card.classList.add("blog-card");
@@ -142,5 +162,5 @@ const blogData = [
   }
   
   // Initialize blog cards
-  initBlogCards();
+  initBlogCards();  
   

@@ -152,103 +152,6 @@ header .nav-bar {
     transition: text-shadow 0.5s, transform 0.5s;
 }
 
-
-/* .mobile-menu {
-  position: relative;
-}
-
-.input-burger {
-  display: none;
-}
-
-
-.toggleBtn {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  display: inline-block;
-  color: #fff;
-  font-size: 24px;
-}
-
-.menuBtn::before {
-  content: 'Menu';
-}
-
-.closeBtn::before {
-  content: 'Close';
-}
-
-#show-menu {
-  display: none;
-}
-
-.btn {
-  display: block;
-  margin: 10px;
-}
-
-.btn a {
-  text-decoration: none;
-  color: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.btn a:hover {
-  color: #ffd700;
-}
-
-.btn i {
-  margin-right: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  header .nav-bar {
-      display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header {
-      position: fixed;
-      width: 100%;
-      height: calc(5rem + 1rem);
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background: transparent;
-  }
-
-  .Logo {
-      font-size: 1.5rem;
-  }
-
-  .toggleBtn {
-      display: block;
-      font-size: 1.5rem;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s ease;
-  }
-
-  .closeBtn {
-      display: none;
-  }
-
-  #show-menu {
-      display: none;
-  }
-
-  #toggle:checked + label.menuBtn + label.closeBtn #show-menu {
-      display: block;
-  }
-} */
-
 /* Section Styles */
 .section {
     color: var(--white-color);
@@ -511,6 +414,48 @@ header .nav-bar.sticky {
     }
 }
 
+/* Container for blog cards */
+#blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Adjust gap as needed */
+}
+
+/* Each blog card */
+.blog-card {
+  background-color: #bcc3d5;
+  flex: 1 1 calc(33.333% - 16px); /* Calculate the width for three cards with the gap included */
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px;
+  margin: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure the images and other contents are responsive */
+.blog-banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-content-wrapper {
+  padding: 16px;
+}
+
+@media (max-width: 1200px) {
+  .blog-card {
+    flex: 1 1 calc(50% - 16px); /* Two cards per row */
+  }
+}
+
+/* Media query for mobile devices (1 card per row) */
+@media (max-width: 768px) {
+  .blog-card {
+    flex: 1 1 100%; /* One card per row */
+  }
+}
+
+
 /* Add your CSS styling here */
 .blog-content {
   max-height: 100px; /* Set a maximum height for the initial display */
@@ -537,19 +482,19 @@ header .nav-bar.sticky {
   }
 }
 
-.blog-card {
+/* .blog-card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  background: #7371; /* Change overall background color */
+  background: #7371;
   padding: 10px;
   border: 1px solid hsla(0, 0%, 0%, 0.1);
   box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.05);
   transition: 0.50s ease;
   margin-bottom: 1rem;
   border-radius: 15px;
-  color: #333; /* Change text color */
-}
+  color: #333;
+} */
 
 .blog-card:hover {
   transform: translateY(-2px);
@@ -563,9 +508,9 @@ header .nav-bar.sticky {
   border-radius: 15px;
 }
 
-.blog-content-wrapper {
+/* .blog-content-wrapper {
   padding: 10px 5px;
-}
+} */
 
 .blog-topic {
   background: #ccc; /* Change topic background color to gray */
