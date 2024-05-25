@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EarningInk.com | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+
+<div id="goBackContainer"></div>
+
+<script>
+    fetch('goback.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('goBackContainer').innerHTML = html;
+        });
+</script>
+
+<div class="container">
+    <div class="form signin" id="SigninForm">
+        <h2>Login</h2>
+        <form action="/EarningInk/Php/login.php" method="post" id="loginform">
+            <div class="inputBox">
+                <input type="text" id="username" name="username" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>Username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="password" name="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <p>Don't have an account? <a href="register.html" class="register">Register</a></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EarningInk.com | Register Yourself</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+
+    <div id="goBackContainer"></div>
+
+    <script>
+        fetch('goback.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('goBackContainer').innerHTML = html;
+            });
+    </script>
+
+    <div class="container">
+        <div class="form signup" id="LoginForm">
+        <h2>Sign Up</h2>
+        <form action="/EarningInk/Php/register.php" method="post" id="registeration">
+            <div class="inputBox">
+                <input type="text" id="full_name" name="full_name" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>Full name</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="username" name="username" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>Username</span>
+            </div>
+            <div class="inputBox">
+                <input type="email" id="email_address" name="email_address" required="required">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email address</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="password" name="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Create password</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="Cpassword" name="Cpassword" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Confirm password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Create Account">
+            </div>
+        </form>
+            <p>Already a member ? <a href="/HTML/login.html" class="login">Log in</a></p>
+        </div>
+    </div>
+      
+    <script src="../Js/LogSig.js"></script>
+
+</body>
+</html>

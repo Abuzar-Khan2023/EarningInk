@@ -484,14 +484,13 @@ footer .content .link-boxes .box {
     padding: 10px 20px;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
   
 .input-box input[type="button"]:hover {
-    box-shadow: 0 0 30px #00fffb, 0 0 60px #0081bc;
+    color: white;
 }
   
 .input-box input[type="button"]:active {

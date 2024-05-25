@@ -30,11 +30,36 @@
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="2" placeholder="Text me..." required></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit" id="submitButton">Submit</button>
     </form>
   </div>
 
+  <div id="confirmationMessage" style="display: none; text-align: center; padding: 10px; background-color: lightgreen; font-weight: bold;">
+    Thank you for your message!
+  </div>
 
-  <script src="../Js/main.js"></script>
+  <script>
+    document.getElementById('contactform').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Perform form submission using fetch API
+      fetch('/EarningInk/Php/connection.php', {
+        method: 'POST',
+        body: new FormData(this)
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show the confirmation message
+          document.getElementById('confirmationMessage').style.display = 'block';
+        } else {
+          console.error('Error:', response.statusText);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+
 </body>
 </html>

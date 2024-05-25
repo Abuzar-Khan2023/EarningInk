@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Execute the query and check for errors
         if ($sql->execute()) {
-            echo "Thank you for your message!";
+            // Send a success response to JavaScript
+            echo "success";
         } else {
             echo "Error: " . $sql->error;
         }
