@@ -66,6 +66,7 @@ body {
 .container .form .inputBox {
   position: relative;
   width: 300px;
+  margin-bottom: 20px;
 }
 
 .container .form .inputBox input {

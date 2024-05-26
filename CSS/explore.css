@@ -158,7 +158,7 @@ h2 {
 
 .category-box.technology {
     border: 2px solid blue;
-    background-image: url('/Images/hm1.jpg');
+    background-image: url('/EarningInk/Images/hm1.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -166,7 +166,7 @@ h2 {
 
 .category-box.health {
     border: 2px solid blue;
-    background-image: url('/Images/hm2.jpg');
+    background-image: url('/EarningInk/Images/hm2.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -174,7 +174,7 @@ h2 {
 
 .category-box.environment {
     border: 2px solid blue;
-    background-image: url('/Images/hm3.jpg');
+    background-image: url('/EarningInk/Images/hm3.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -182,7 +182,7 @@ h2 {
 
 .category-box.lifestyle {
     border: 2px solid blue;
-    background-image: url('/Images/hm4.jpg');
+    background-image: url('/EarningInk/Images/hm4.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -193,7 +193,15 @@ h2 {
 .tags-box {
     margin-top: 20px;
     position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: background-image 0.3s ease;
 }
+
 
 .topic {
     font-size: 16px;

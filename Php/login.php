@@ -19,18 +19,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if all required form data is set
     if (isset($_POST['username']) && isset($_POST['password'])) {
         // Get form data
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $input_username = $con->real_escape_string($_POST['username']);
+        $input_password = $con->real_escape_string($_POST['password']);
 
         // SQL query to retrieve user data based on username
-        $sql = $con->prepare("SELECT * FROM loginform WHERE username = ?");
+        $sql = $con->prepare("SELECT * FROM registeration WHERE username = ?");
         
         // Check if query preparation was successful
         if (!$sql) {
             die("Query preparation failed: " . $con->error);
         }
 
-        $sql->bind_param("s", $username);
+        $sql->bind_param("s", $input_username);
         $sql->execute();
         $result = $sql->get_result();
 
@@ -38,13 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user = $result->fetch_assoc();
 
             // Verify password
-            if (password_verify($password, $user['password'])) {
+            if (password_verify($input_password, $user['password'])) {
                 // Store user data in session
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                echo "Login successful!";
-                // Redirect to dashboard or desired page
-                header("Location: /dashboard.php");
+                // Redirect to dashboard
+                header("Location: dashboard.php");
                 exit;
             } else {
                 echo "Invalid username or password.";

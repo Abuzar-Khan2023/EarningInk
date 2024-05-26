@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if all required form data is set
     if (isset($_POST['full_name']) && isset($_POST['username']) && isset($_POST['email_address']) && isset($_POST['password']) && isset($_POST['Cpassword'])) {
         // Get form data
-        $full_name = $_POST['full_name'];
-        $username = $_POST['username'];
-        $email_address = $_POST['email_address'];
-        $password = $_POST['password'];
-        $Cpassword = $_POST['Cpassword'];
+        $full_name = $con->real_escape_string($_POST['full_name']);
+        $username = $con->real_escape_string($_POST['username']);
+        $email_address = $con->real_escape_string($_POST['email_address']);
+        $password = $con->real_escape_string($_POST['password']);
+        $Cpassword = $con->real_escape_string($_POST['Cpassword']);
 
         // Perform validation, like checking if passwords match
         if ($password !== $Cpassword) {
