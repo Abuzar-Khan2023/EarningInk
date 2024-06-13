@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $content = $con->real_escape_string($_POST['content']);
         $user_id = $_SESSION['user_id'];
 
-        // SQL query to insert data into the blogs table
-        $sql = $con->prepare("INSERT INTO blogs (user_id, title, content) VALUES (?, ?, ?)");
+        // SQL query to insert data into the blog table
+        $sql = $con->prepare("INSERT INTO blog (user_id, title, content) VALUES (?, ?, ?)");
         
         // Check if query preparation was successful
         if (!$sql) {

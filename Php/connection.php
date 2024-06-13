@@ -5,11 +5,11 @@ $password = "";
 $database = "earningink";
 
 // Create connection
-$con = mysqli_connect($servername, $username, $password, $database);
+$con = new mysqli($servername, $username, $password, $database);
 
 // Check connection
-if (!$con) {
-    die("Error detected: " . mysqli_connect_error());
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
 // Check if form is submitted using POST method
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $message = $_POST['message'];
 
         // Use prepared statements to prevent SQL injection
-        $sql = $con->prepare("INSERT INTO contactform (name, email, message) VALUES (?, ?, ?)");
+        $sql = $con->prepare("INSERT INTO Contact (name, email, message) VALUES (?, ?, ?)");
         $sql->bind_param("sss", $name, $email, $message);
 
         // Execute the query and check for errors
@@ -41,5 +41,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Form not submitted correctly.";
 }
 
-mysqli_close($con);
+$con->close();
 ?>

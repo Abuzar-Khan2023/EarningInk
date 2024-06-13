@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $input_password = $con->real_escape_string($_POST['password']);
 
         // SQL query to retrieve user data based on username
-        $sql = $con->prepare("SELECT * FROM registeration WHERE username = ?");
+        $sql = $con->prepare("SELECT * FROM registration WHERE username = ?");
         
         // Check if query preparation was successful
         if (!$sql) {

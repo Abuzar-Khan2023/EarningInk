@@ -9,6 +9,14 @@
 </head>
 <body>
 
+    <script>
+        fetch('goback.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('goBackContainer').innerHTML = html;
+            });
+    </script>
+
 <div class="explore-container">
     <div class="search-bar">
         <input type="text" placeholder="Search blogs...">

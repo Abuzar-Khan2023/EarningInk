@@ -21,7 +21,7 @@
     <div class="container">
         <div class="form signup" id="LoginForm">
         <h2>Sign Up</h2>
-        <form action="/EarningInk/Php/register.php" method="post" id="registeration">
+        <form id="registeration">
             <div class="inputBox">
                 <input type="text" id="full_name" name="full_name" required="required">
                 <i class="fa-regular fa-user"></i>
@@ -51,10 +51,47 @@
                 <input type="submit" value="Create Account">
             </div>
         </form>
-            <p>Already a member ? <a href="/HTML/login.html" class="login">Log in</a></p>
+            <p>Already a member? <a href="/HTML/login.html" class="login">Log in</a></p>
         </div>
     </div>
-      
+
+    <div id="confirmationMessage" style="display: none; text-align: center; padding: 10px; background-color: lightgreen; font-weight: bold;">
+        Registration Successful! Now you need to login Yourself. Thank you.
+    </div>
+    <div id="errorMessage" style="display: none; text-align: center; padding: 10px; background-color: lightcoral; font-weight: bold;">
+        Error: <span id="errorText"></span>
+    </div>
+    
+    <script>
+        document.getElementById('registeration').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Perform form submission using fetch API
+            fetch('/EarningInk/Php/register.php', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === 'Registration Successful! Now you need to login Yourself. Thanks!') {
+                    // Show the confirmation message
+                    document.getElementById('confirmationMessage').style.display = 'block';
+                    document.getElementById('errorMessage').style.display = 'none';
+                } else {
+                    document.getElementById('errorText').textContent = data;
+                    document.getElementById('errorMessage').style.display = 'block';
+                    document.getElementById('confirmationMessage').style.display = 'none';
+                }
+            })
+            .catch(error => {
+                document.getElementById('errorText').textContent = error;
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('confirmationMessage').style.display = 'none';
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    
     <script src="../Js/LogSig.js"></script>
 
 </body>
