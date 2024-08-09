@@ -2,6 +2,7 @@
 const blogData = [
 
     {
+      "bannerSrc": "/Images/blog-1.png",
       "topic": "Database",
       "title": "Building microservices with Dropwizard, MongoDB & Docker",
       "description": "This NoSQL database oriented to documents (by documents like JSON) combines some of the features from relational databases, easy to use and the multi-platform is the best option for scale up and have fault tolerance, load balancing, map reduce, etc.",
@@ -10,6 +11,7 @@ const blogData = [
       "duration": "3 min"
     },
     {
+      "bannerSrc": "/Images/blog-2.png",
       "topic": "Web Performance",
       "title": "Fast web page loading on a $20 feature phone",
       "description": "Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in developing countries to leverage the web. Think of them as a light version of a smart phone.",
@@ -18,6 +20,7 @@ const blogData = [
       "duration": "2 min"
     },
     {
+      "bannerSrc": "/Images/blog-3.png",
       "topic": "Accessibility",
       "title": "Accessibility Tips for Web Developers",
       "description": "It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key areas of disability we can optimize for: visual, hearing, mobility, cognition, speech and neural. Many tools and resources can help here, even if you're totally new to web accessibility.",

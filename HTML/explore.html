@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/EarningInk/CSS/explore.css">
-    <link rel="stylesheet" href="/EarningInk/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/explore.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/index.css">
     <title>Explore | EarningInk</title>
 </head>
 <body>
 
-    <script>
-        fetch('goback.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('goBackContainer').innerHTML = html;
-            });
-    </script>
+    <header></header>
 
 <div class="explore-container">
     <div class="search-bar">
@@ -96,6 +91,33 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('/HTML/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('header').innerHTML = html;
+                const inputBurger = document.getElementById("toggle");
+                const navigation = document.getElementById("show-menu");
+                const menuBtn = document.querySelector(".menuBtn");
+                const closeBtn = document.querySelector(".closeBtn");
+    
+                inputBurger.addEventListener("change", function() {
+                    if (inputBurger.checked) {
+                        navigation.style.display = "flex";
+                        menuBtn.style.display = "none";
+                        closeBtn.style.display = "inline-block";
+                    } else {
+                        navigation.style.display = "none";
+                        closeBtn.style.display = "none";
+                        menuBtn.style.display = "inline-block";
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+    </script>
 
 <div id="footer-container"></div>
 

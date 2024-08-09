@@ -78,6 +78,7 @@ footer {
 }
 
 
+
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 11px;
@@ -102,55 +103,155 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-/* Header Styles */
+/* Sticky and Blurred Navigation */
 header {
-    z-index: 999;
-    position: fixed;
-    width: 100%;
-    height: calc(5rem + 1rem);
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    transition: 0.5s ease;
-    transition-property: height, background;
+  height: 60px;
+  background-color: rgba(16, 6, 44, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); 
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top */
 }
 
-header.sticky {
-    height: calc(2.5rem + 1rem);
-    background: rgba(84, 45, 146, 0.1);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Adjusting Navigation Items' Padding and Margins */
+.desktop-navigation ul li a,
+.navigation ul li a {
+  padding: 15px 20px;
+  display: inline-block;
 }
 
-header .nav-bar {
-    list-style: none;
-    position: relative;
-    width: 100%;
-    display: flex;
-    transition: 0.3s ease;
+/* Adding Transition for Smooth Scrolling Effect */
+header,
+.desktop-navigation ul li a,
+.navigation ul li a {
+  transition: background-color 0.3s, padding 0.3s;
 }
 
-.nav-bar .Logo {
-    columns: var(--white-color);
-    font-size: 0.8cm;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-shadow: var(--text-shadow);
+.navigation ul li a {
+  display: flex;
+  align-items: center;
 }
 
-.nav-items a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 50px;
-    font-weight: 600;
-    position: relative;
-    transition: text-shadow 0.5s, transform 0.5s;
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.Logo {
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 2em;
+}
+
+/* Desktop Navigation */
+.desktop-navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-navigation ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.desktop-navigation ul li a:hover {
+  background-color: #030000;
+  border-radius: 4px;
+}
+
+/* Mobile Navigation */
+.mobile {
+  display: none;
+}
+
+.mobile-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mobile-icons i {
+  color: white;
+  font-size: 1.5em;
+}
+
+.input-burger {
+  display: none;
+}
+
+.toggleBtn {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: #1a0202;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  border-bottom: 1px solid #444;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation ul li a:hover {
+  background-color: white;
+  color: rgba(16, 6, 44, 0.8);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .desktop {
+      display: none;
+  }
+
+  .mobile {
+      display: flex;
+  }
+
+  .input-burger:checked ~ .navigation {
+      display: flex;
+  }
+
+  .input-burger:checked ~ .menuBtn {
+      display: none;
+  }
+
+  .input-burger:not(:checked) ~ .closeBtn {
+      display: none;
+  }
+}
+
 
 /* Section Styles */
 .section {
@@ -309,109 +410,6 @@ header .nav-bar {
 
 .swiper-slide-thumb-active {
     border: 1px solid var(--white-color);
-}
-
-/* Navigation Bar Styles */
-header .nav-bar {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 5%;
-    background: transparent;
-    transition: 0.3s ease;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-header .nav-bar.sticky {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.header .nav-bar .Logo {
-    color: var(--dark-color);
-    font-size: 1.8cm;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.navigation .nav-items {
-    display: flex;
-    list-style: none;
-}
-
-.navigation .nav-items a {
-    color: var(--dark-color);
-    font-size: 1em;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-.navigation .nav-items a:hover {
-    background-color: var(--navigation-item-hover-color);
-    color: var(--white-color);
-}
-
-.nav-menu-btn, .nav-close-btn {
-    display: none;
-}
-
-/* Responsive Navigation Styles */
-@media screen and (max-width: 785px) {
-    header .nav-bar {
-        padding: 20px;
-    }
-
-    .navigation {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.95);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s ease;
-        z-index: 999;
-    }
-
-    .navigation.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .navigation .nav-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation .nav-items a {
-        margin: 10px 0;
-    }
-
-    .nav-menu-btn, .nav-close-btn {
-        font-size: 1.5em;
-        color: var(--dark-color);
-        cursor: pointer;
-        display: block;
-        transition: 0.3s ease;
-    }
-
-    .nav-close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
 }
 
 /* Container for blog cards */

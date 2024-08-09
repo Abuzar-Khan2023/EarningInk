@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/EarningInk/index.css">
-    <link rel="stylesheet" href="/EarningInk/CSS/footer.css">
-    <link rel="stylesheet" href="/EarningInk/CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/swiper-bundle.min.css">
     <link rel="stylesheet" href="path/to/icon-font-library.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -16,47 +16,13 @@
 </head>
 <body>
   
-  <header>
-    <!-- Desktop Nav-Bar -->
-    <div class="nav-bar desktop">
-      <a href="" class="Logo">EarningInk</a>
-      <div class="navigation">
-        <div class="nav-items">
-          <a href="/EarningInk/index.html">Home</a>
-          <a href="/EarningInk/HTML/Blog.html">Blog</a>
-          <a href="/EarningInk/HTML/explore.html">Explore</a>
-          <a href="/EarningInk/HTML/about.html">About</a>
-          <a href="/EarningInk/HTML/contactForm.html">Contact</a>
-          <a href="/EarningInk/HTML/login.html">Login</a>
-          <a href="/EarningInk/HTML/Register.html">SignUp</a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header></header>
 
-  <!-- Mobile Nav-Bar
-  <header>
-    <div class="nav-bar">
-        <a href="#" class="Logo">EarningInk</a>
-        <input type="checkbox" id="toggle" class="input-burger">
-        <label for="toggle" class="toggleBtn menuBtn"><i class="fas fa-bars"></i></label>
-        <label for="toggle" class="toggleBtn closeBtn"><i class="fas fa-times"></i></label>
-        <nav id="show-menu" class="navigation">
-            <ul class="nav-items">
-                <li class="nav-item"><a href="#">Home</a></li>
-                <li class="nav-item"><a href="#">About</a></li>
-                <li class="nav-item"><a href="#">Services</a></li>
-                <li class="nav-item"><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header> -->
-  
     <section id="Home" class="home">
         <div class="swiper bg-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="/EarningInk/Images/hm1.jpg" alt="">
+                <img src="/Images/hm1.jpg" alt="">
                 <div class="text-content">
                   <h2 class="title">Technology <span>Igniting Tomorrow's Progress</span></h2>
                 <p>Explore the ever-evolving world of technology, where we unravel the latest breakthroughs and trends shaping our digital landscape. From artificial intelligence to cybersecurity, join us in navigating the forefront of innovation that is transforming the way we live and work. </p>
@@ -64,7 +30,7 @@
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
-                <img src="/EarningInk/Images/hm2.jpg" alt="">
+                <img src="/Images/hm2.jpg" alt="">
                 <div class="text-content">
                   <h2 class="title">Health <span>Nurturing Your Mind and Body</span></h2>
                 <p>Dive into the realm of well-being as we discuss topics ranging from physical fitness to mental health. Discover expert insights, practical tips, and the latest research to empower you on your journey toward a healthier and more balanced lifestyle.</p>
@@ -72,7 +38,7 @@
                 </div>
               </div>
               <div class="swiper-slide dark-layer">
-                <img src="/EarningInk/Images//hm3.jpg" alt="">
+                <img src="/Images//hm3.jpg" alt="">
                 <div class="text-content">
                   <h2 class="title">Environment <span>Harmony with the Planet</span></h2>
                 <p>Engage in conversations that matter for our planet. Explore the challenges of climate change and discover sustainable living practices. Uncover eco-friendly solutions, conservation efforts, and learn how small actions can collectively make a significant impact on our environment.</p>
@@ -80,7 +46,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img src="/EarningInk/Images/hm4.jpg" alt="">
+                <img src="/Images/hm4.jpg" alt="">
                 <div class="text-content">
                   <h2 class="title">Lifestyle <span>Cultivating a Fulfilling Life</span></h2>
                 <p>Embark on a journey of self-discovery and growth. From enhancing your personal and professional skills to building positive habits, our discussions aim to inspire and guide you in various aspects of life. Elevate your lifestyle through practical advice and motivation for continuous improvement.</p>
@@ -92,10 +58,10 @@
 
           <div class="bg-slider-thumbs">
             <div class="swiper-wrapper thumbs-container">
-              <img src="/EarningInk/Images/hm1.jpg" class="swiper-slide" alt="">
-              <img src="/EarningInk/Images/hm2.jpg" class="swiper-slide" alt="">
-              <img src="/EarningInk//Images/hm3.jpg" class="swiper-slide" alt="">
-              <img src="/EarningInk/Images/hm4.jpg" class="swiper-slide" alt="">
+              <img src="/Images/hm1.jpg" class="swiper-slide" alt="">
+              <img src="/Images/hm2.jpg" class="swiper-slide" alt="">
+              <img src="/Images/hm3.jpg" class="swiper-slide" alt="">
+              <img src="/Images/hm4.jpg" class="swiper-slide" alt="">
             </div>
           </div>
     </section>
@@ -105,22 +71,51 @@
     <div id="blog" class="blog-card-group">
       
     </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          fetch('/HTML/navbar.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.querySelector('header').innerHTML = html;
+                  const inputBurger = document.getElementById("toggle");
+                  const navigation = document.getElementById("show-menu");
+                  const menuBtn = document.querySelector(".menuBtn");
+                  const closeBtn = document.querySelector(".closeBtn");
+      
+                  inputBurger.addEventListener("change", function() {
+                      if (inputBurger.checked) {
+                          navigation.style.display = "flex";
+                          menuBtn.style.display = "none";
+                          closeBtn.style.display = "inline-block";
+                      } else {
+                          navigation.style.display = "none";
+                          closeBtn.style.display = "none";
+                          menuBtn.style.display = "inline-block";
+                      }
+                  });
+              })
+              .catch(error => console.error('Error loading navbar:', error));
+      });
+      </script>
+      
       
 
     <div id="footer-container"></div>
 
     <script>
-       fetch('/EarningInk/HTML/footer.html')
+       fetch('/HTML/footer.html')
           .then(response => response.text())
           .then(html => {
              document.getElementById('footer-container').innerHTML = html;
           });
     </script>
   
-  <script src="/EarningInk/Js/swiper-bundle.min.js"></script>
-  <script src="/EarningInk/Js/Humburgur.js"></script>
-  <script src="/EarningInk/Js/main.js"></script>
-  <script src="/EarningInk/Js/Blog.js"></script>
+  <script src="/Js/swiper-bundle.min.js"></script>
+  <script src="/Js/Humburgur.js"></script>
+  <script src="/Js/main.js"></script>
+  <script src="/Js/Blog.js"></script>
 
 </body>
 </html>

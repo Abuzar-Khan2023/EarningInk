@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <title>EarningInk.com | Register Yourself</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../CSS/register.css">
+    <link rel="stylesheet" href="/CSS/register.css">
 </head>
 <body>
 
-    <div id="goBackContainer"></div>
-
-    <script>
-        fetch('goback.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('goBackContainer').innerHTML = html;
-            });
-    </script>
+    <header></header>
 
     <div class="container">
         <div class="form signup" id="LoginForm">
@@ -91,8 +83,35 @@
             });
         });
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('/HTML/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('header').innerHTML = html;
+                const inputBurger = document.getElementById("toggle");
+                const navigation = document.getElementById("show-menu");
+                const menuBtn = document.querySelector(".menuBtn");
+                const closeBtn = document.querySelector(".closeBtn");
     
-    <script src="../Js/LogSig.js"></script>
+                inputBurger.addEventListener("change", function() {
+                    if (inputBurger.checked) {
+                        navigation.style.display = "flex";
+                        menuBtn.style.display = "none";
+                        closeBtn.style.display = "inline-block";
+                    } else {
+                        navigation.style.display = "none";
+                        closeBtn.style.display = "none";
+                        menuBtn.style.display = "inline-block";
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    });
+    </script>
+    
+    <script src="/Js/LogSig.js"></script>
 
 </body>
 </html>
