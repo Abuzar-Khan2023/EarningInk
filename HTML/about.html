@@ -6,12 +6,58 @@
     <title>About Us</title>
     <link rel="stylesheet" href="/CSS/about.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/CSS/about.css">
 </head>
 <body>
 
     <header></header>
 
-    <h2 style="color: white; margin: 20px;">Loading...</h2>
+    <div class="about-container">
+        <header class="about-header">
+            <h1>Welcome to Earningink</h1>
+            <!-- <p>Your platform to share knowledge, express creativity, and earn while you blog.</p> -->
+        </header>
+
+        <section class="about-content">
+            <h2>Our Mission</h2>
+            <p>At Earningink, we believe in empowering individuals to share their stories, ideas, and expertise with the world. Our platform is designed to give everyone a voice and the opportunity to earn from their content.</p>
+
+            <h2>How It Works</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <h3>1. Create an Account</h3>
+                    <p>Sign up to become a part of our vibrant community. Creating an account is simple and free.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Write and Submit Your Blog</h3>
+                    <p>Share your thoughts and expertise by writing a blog post. Submit your post for review, and our team will ensure it meets our quality standards.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Get Published</h3>
+                    <p>Once your blog is approved, it will be published on Earningink. Readers from around the world can read and engage with your content.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Earn from Impressions</h3>
+                    <p>The more readers your blog attracts, the more you earn. We reward bloggers based on the impressions their posts generate.</p>
+                </div>
+            </div>
+
+            <h2>Why Earningink?</h2>
+            <p>Earningink isn’t just another blogging platform. It’s a community where your voice matters, and your content can make a real impact. Whether you’re a seasoned writer or just starting, we provide you with the tools and opportunities to grow and monetize your passion.</p>
+
+            <button id="learn-more-btn">Learn More</button>
+            <div id="extra-info" class="hidden">
+                <h3>Join Our Community</h3>
+                <p>Be a part of Earningink today. Connect with like-minded individuals, learn from others, and start earning from your content. We can't wait to see what you'll create!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Wavy Background SVG -->
+    <div class="wave-background"></div>
+    
+
+    <script src="/Js/about.js"></script>
     
 
     <script>
@@ -40,6 +86,16 @@
                 .catch(error => console.error('Error loading navbar:', error));
         });
         </script>
+
+<div id="footer-container"></div>
+
+<script>`
+   fetch('/HTML/footer.html')
+      .then(response => response.text())
+      .then(html => {
+         document.getElementById('footer-container').innerHTML = html;
+      });
+</script>
 
         <script src="/Js/Humburgur.js"></script>
 

@@ -2,15 +2,15 @@
     width: 90%;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 10px rgba(241, 227, 227, 0.1); 
 } 
 
+/* Ensure consistent spacing and alignment */
 h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #007bff;
+    margin: 0;
+    padding: 0;
 }
 
 /* Search bar styles */
@@ -32,10 +32,14 @@ h2 {
     transition: border-color 0.3s ease;
 }
 
+.search-bar input[type="text"]:focus {
+    border-color: #007bff;
+}
+
 .search-bar button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffffff;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -49,44 +53,35 @@ h2 {
 /* Category box styles */
 .category-boxes {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     grid-gap: 20px;
 }
 
 .category-box {
+    position: relative;
     padding: 20px;
     background-color: #fff;
+    border: 2px solid wheat;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     overflow: hidden;
-    position: relative;
     height: 250px;
-    transition: background-image 0.3s ease;
+    transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
 .category-box:hover {
-    background-image: none;
-}
-
-.category-box:hover img {
-    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .category-box img {
-    transition: opasity 1s ease;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
-.category-box h2 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.category-box ul li {
-    font-size: 1em;
+.category-box:hover img {
+    opacity: 0.7;
 }
 
 .category-box .content {
@@ -95,22 +90,17 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: opacity 0.3s ease;
     padding: 10px;
     text-align: center;
-
     color: #333;
     font-size: 16px;
     font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -120,6 +110,8 @@ h2 {
 
 .category-box h2 {
     margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .category-box ul {
@@ -130,73 +122,57 @@ h2 {
 
 .category-box ul li {
     margin-bottom: 5px;
+    font-size: 1em;
 }
 
 .category-box a {
     text-decoration: none;
-    color: #333;
+    color: #007bff;
 }
 
-.category-box.technology,
-.category-box.health,
-.category-box.environment,
-.category-box.lifestyle {
-    border: 2px solid blue;
-}
-
-.category-box.technology:hover,
-.category-box.health:hover,
-.category-box.environment:hover,
-.category-box.lifestyle:hover {
-    background-image: none;
+.category-box a:hover {
+    color: #0056b3;
 }
 
 .category-box.technology {
-    border: 2px solid blue;
     background-image: url('/Images/hm1.jpg');
     background-size: cover;
     background-position: center;
-    padding: 20px;
 }
 
 .category-box.health {
-    border: 2px solid blue;
     background-image: url('/Images/hm2.jpg');
     background-size: cover;
     background-position: center;
-    padding: 20px;
 }
 
 .category-box.environment {
-    border: 2px solid blue;
     background-image: url('/Images/hm3.jpg');
     background-size: cover;
     background-position: center;
-    padding: 20px;
 }
 
 .category-box.lifestyle {
-    border: 2px solid blue;
     background-image: url('/Images/hm4.jpg');
     background-size: cover;
     background-position: center;
-    padding: 20px;
-} */
-
+}
 
 /* Tags box styles */
 .tags-box {
     margin-top: 20px;
-    position: relative;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     overflow: hidden;
-    transition: background-image 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
+.tags-box:hover {
+    transform: scale(1.05);
+}
 
 .topic {
     font-size: 16px;
@@ -211,11 +187,11 @@ h2 {
 
 .goal-box {
     display: inline-block;
+    margin-top: 10px;
 }
 
 .tag, .tags-box ul {
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .tag, .tags-box ul li a {
@@ -232,6 +208,8 @@ h2 {
     background-color: #0056b3;
 }
 
+
+/* Responsive design for small screens */
 @media (max-width: 600px) {
     .explore-container {
         padding: 10px;
@@ -242,7 +220,7 @@ h2 {
     }
 
     .category-box, .tags-box {
-        flex-basis: 100%;
+        grid-template-columns: 1fr;
         margin-bottom: 20px;
     }
 }
